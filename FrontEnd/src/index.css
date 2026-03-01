@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --radius-2xl: calc(var(--radius) + 8px);
+    --radius-3xl: calc(var(--radius) + 12px);
+    --radius-4xl: calc(var(--radius) + 16px);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Lookie Dookie Playful Pastel Theme */
+/* Primary: Mint #A8E6CF | Secondary: Peach #FFB7B2 | Accent: Lavender #C3B1E1 */
+:root {
+    --radius: 1rem;
+    --background: oklch(0.99 0.005 95);       /* #FFFDF7 warm white */
+    --foreground: oklch(0.27 0.01 210);        /* #2D3436 dark text */
+    --card: oklch(1 0 0);                      /* white */
+    --card-foreground: oklch(0.27 0.01 210);   /* #2D3436 */
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.27 0.01 210);
+    --primary: oklch(0.87 0.08 163);           /* #A8E6CF mint */
+    --primary-foreground: oklch(0.27 0.01 210);/* dark text on mint */
+    --secondary: oklch(0.82 0.07 25);          /* #FFB7B2 peach */
+    --secondary-foreground: oklch(0.27 0.01 210);
+    --muted: oklch(0.96 0.005 95);             /* soft warm gray */
+    --muted-foreground: oklch(0.50 0.01 220);  /* #636E72 */
+    --accent: oklch(0.78 0.07 300);            /* #C3B1E1 lavender */
+    --accent-foreground: oklch(0.27 0.01 210);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.92 0.01 95);
+    --input: oklch(0.92 0.01 95);
+    --ring: oklch(0.87 0.08 163);              /* mint ring */
+    --chart-1: oklch(0.87 0.08 163);           /* mint */
+    --chart-2: oklch(0.82 0.07 25);            /* peach */
+    --chart-3: oklch(0.78 0.07 300);           /* lavender */
+    --chart-4: oklch(0.85 0.12 85);            /* warm yellow */
+    --chart-5: oklch(0.75 0.10 200);           /* sky blue */
+    --sidebar: oklch(0.97 0.01 163);
+    --sidebar-foreground: oklch(0.27 0.01 210);
+    --sidebar-primary: oklch(0.87 0.08 163);
+    --sidebar-primary-foreground: oklch(0.27 0.01 210);
+    --sidebar-accent: oklch(0.78 0.07 300);
+    --sidebar-accent-foreground: oklch(0.27 0.01 210);
+    --sidebar-border: oklch(0.92 0.01 95);
+    --sidebar-ring: oklch(0.87 0.08 163);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground font-sans;
+        font-family: "Nunito", ui-sans-serif, system-ui, sans-serif;
+    }
+}
